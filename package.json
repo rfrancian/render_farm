@@ -1,5 +1,5 @@
 {
-  "name": "renderfarm",
+  "name": "render_farm",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,5 +12,18 @@
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11"
-  }
+  },
+  "description": "renderfarm renders a blender image in parts on multiple computers",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfrancian/render_farm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rfrancian/render_farm/issues"
+  },
+  "homepage": "https://github.com/rfrancian/render_farm#readme"
 }

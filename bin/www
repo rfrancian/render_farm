@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('renderfarm:server');
+var debug = require('debug')('render_farm:server');
 var http = require('http');
 
 /**
