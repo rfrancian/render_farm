@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+sshpass -p zazen ssh robertfrancian@192.168.86.20 /Applications/Blender/blender.app/Contents/MacOS/blender -b $1 -P /Volumes/blenderFiles/render_chunk.py -- 0.0 0.3 0.0 1.0 $2

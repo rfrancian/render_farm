@@ -1,0 +1,48 @@
+extends layout
+
+
+block content
+  h1= title
+  p Welcome to #[em Render farm v 0.001].
+  
+  h1 Render specs:
+
+  if error
+    p Error getting dynamic content.
+  else
+    p Render farm data :
+
+
+
+
+
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='title') Title:
+      input#title.form-control(type='text', placeholder='filename' name='filename' required='true'  size='75')
+    p
+    div.form-group
+      label(for='jobid') job ID:
+      input#jobid.form-control(type='text', placeholder='jobid' name='jobid' required='true') 
+    p
+    div.form-group
+      label(for='samples') samples:
+      input#samples.form-control(type='text', placeholder='samples' name='samples' required='true') 
+    p
+
+
+      div.form-group
+        label(for='RH') RH:
+        textarea#RH.form-control(type='textarea', placeholder='RH' name='RH' rows='10' required='true' cols='150') 
+      div.form-group
+        label(for='LH') LH:
+        textarea#LH.form-control(type='textarea', placeholder='LH' name='LH' rows='10' required='true' cols= '150') 
+    p
+      button.btn.btn-primary(type='submit') Submit
+
+
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg
