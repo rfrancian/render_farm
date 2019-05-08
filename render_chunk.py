@@ -6,9 +6,16 @@
 #
 #
 #
-#  run like:
+#  run like (without keys):
 #   
 #  sshpass -p <password> ssh <node address> < path to blender > -b < blend file > -P < python file >  --  min_x  max_x  min_y  max_y  samples
+#  -b run in background
+#  -P python script
+#   --   space before and after --  separates arguments from command line
+#
+#  run like (with keys):
+#   
+#  ssh <node address> < path to blender > -b < blend file > -P < python file >  --  min_x  max_x  min_y  max_y  samples
 #  -b run in background
 #  -P python script
 #   --   space before and after --  separates arguments from command line
@@ -21,12 +28,6 @@
 #  render LH side on MacOS  192.168.86.20
 #  sshpass -p <password> ssh <user>@IP_address /Applications/Blender/blender.app/Contents/MacOS/blender -b /Volumes/blenderFiles/argvTestStrip.blend -P /Volumes/blenderFiles/render_chunk.py -- 0.0 0.5 0.0 1.0 256
 #
-#  the following line is from ./blenderScript_LH  the script accepts two args  $1 = blend filename  $2 = samples
-# sshpass -p <password> ssh <user>@IP_address /Applications/Blender/blender.app/Contents/MacOS/blender -b $1 -P /Volumes/blenderFiles/render_chunk.py -- 0.0 0.5 0.0 1.0 $2
-#
-#  the following line is from ./blenderScript_RH  the script accepts two args  $1 = blend filename  $2 = samples
-# sshpass -p <password> ssh <user>@IP_address /snap/blender/20/blender -b $1 -P /Volumes/blenderFiles/render_chunk.py -- 0.5 1.0 0.0 1.0 $2
-
 
 
 import bpy
@@ -42,11 +43,11 @@ argv = argv[argv.index("--") + 1:]  # get all args after "--"
 
 #set render attributes
 
-xres = 2048
-yres = 4096
-respercent = 100
-seed = 0
-samples = int(argv[4])
+#xres = 2048
+#yres = 4096
+#respercent = 100
+#seed = 0
+#samples = int(argv[4])
 
 # set seed and samples
 #bpy.data.scenes["Scene"].cycles.seed= seed
