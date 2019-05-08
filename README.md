@@ -2,3 +2,5 @@
 renderfarm renders a blender image in parts on multiple computers
 
 requires nodejs + express
+
+this is an early version that uses two computers in my studio to render the left (LH) and right (RH) sides of an image in blender, running headless in the background.
