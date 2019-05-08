@@ -16,16 +16,16 @@
 #
 # commands for render scripts. 
 #  render RH side on ubuntu 192.168.86.36
-#  sshpass -p YngWtsfAIWr517! ssh rsf@192.168.86.36 /snap/blender/20/blender -b /Volumes/blenderFiles/argvTestStrip.blend -P /Volumes/blenderFiles/render_chunk.py -- 0.5 1.0 0.0 1.0 256
+#  sshpass -p <password> ssh <user>@IP_address /snap/blender/20/blender -b /Volumes/blenderFiles/argvTestStrip.blend -P /Volumes/blenderFiles/render_chunk.py -- 0.5 1.0 0.0 1.0 256
 #
 #  render LH side on MacOS  192.168.86.20
-#  sshpass -p zazen ssh robertfrancian@192.168.86.20 /Applications/Blender/blender.app/Contents/MacOS/blender -b /Volumes/blenderFiles/argvTestStrip.blend -P /Volumes/blenderFiles/render_chunk.py -- 0.0 0.5 0.0 1.0 256
+#  sshpass -p <password> ssh <user>@IP_address /Applications/Blender/blender.app/Contents/MacOS/blender -b /Volumes/blenderFiles/argvTestStrip.blend -P /Volumes/blenderFiles/render_chunk.py -- 0.0 0.5 0.0 1.0 256
 #
 #  the following line is from ./blenderScript_LH  the script accepts two args  $1 = blend filename  $2 = samples
-# sshpass -p zazen ssh robertfrancian@192.168.86.20 /Applications/Blender/blender.app/Contents/MacOS/blender -b $1 -P /Volumes/blenderFiles/render_chunk.py -- 0.0 0.5 0.0 1.0 $2
+# sshpass -p <password> ssh <user>@IP_address /Applications/Blender/blender.app/Contents/MacOS/blender -b $1 -P /Volumes/blenderFiles/render_chunk.py -- 0.0 0.5 0.0 1.0 $2
 #
 #  the following line is from ./blenderScript_RH  the script accepts two args  $1 = blend filename  $2 = samples
-# sshpass -p YngWtsfAIWr517! ssh rsf@192.168.86.36 /snap/blender/20/blender -b $1 -P /Volumes/blenderFiles/render_chunk.py -- 0.5 1.0 0.0 1.0 $2
+# sshpass -p <password> ssh <user>@IP_address /snap/blender/20/blender -b $1 -P /Volumes/blenderFiles/render_chunk.py -- 0.5 1.0 0.0 1.0 $2
 
 
 
