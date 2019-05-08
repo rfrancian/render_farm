@@ -20,6 +20,7 @@ const workerNodeRH = WorkerNodeRH;
 const filename = Filename;
 const samples = Samples;
 
+console.log('here: ',scriptName, filename, samples, workerNodeRH);
 
 const childProcessRH = spawn(scriptName, [filename, samples, workerNodeRH]);
 
