@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-ssh $3  /snap/blender/20/blender  -b $1 -P /Volumes/blenderFiles/render_chunk.py -- 0.3 1.0 0.0 1.0 $2 
+sshpass -p zazen ssh $3  /snap/blender/20/blender  -b $1 -P /Volumes/blenderFiles/render_chunk.py -- 0.3 1.0 0.0 1.0 $2 
