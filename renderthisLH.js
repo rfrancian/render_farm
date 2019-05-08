@@ -1,6 +1,6 @@
 
 // this file is a test render child process spawn.
-// it takes the user ID in the form <user>@<ip_address>, the blender filename, the number of samples desired, 
+// it takes the workerNode ID in the form <workerNode>@<ip_address>, the blender filename, the number of samples desired, 
 // and the script name and starts my laptop doing the LH (lefthand side of the image)
 // and my ubuntu machine doing the RH
 // both outputs are to stdout at the moment
@@ -14,15 +14,15 @@
 
 const {spawn} = require('child_process');
 
-function renderthisLH(ScriptName, Filename, Samples, UserLH) {
+function renderthisLH(ScriptName, Filename, Samples, WorkerNodeLH) {
   
 const scriptName = ScriptName;
-const userLH = UserLH;    
+const workerNodeLH = WorkerNodeLH;    
 const filename = Filename;
 const samples = Samples;
 
 
-const childProcessRH = spawn(scriptName, [filename, samples, userLH]);
+const childProcessRH = spawn(scriptName, [filename, samples, workerNodeLH]);
 
     childProcessRH.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`);
