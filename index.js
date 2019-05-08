@@ -13,7 +13,7 @@ console.log(userLH);
 console.log(filename);
 console.log(samples);
 
-
+// render left and right sides of image
 renderRH(filename, samples, userRH);
 renderLH(filename, samples, userLH);
 
