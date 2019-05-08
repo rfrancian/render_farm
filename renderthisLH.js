@@ -14,14 +14,15 @@
 
 const {spawn} = require('child_process');
 
-function renderthisLH(Filename, Samples, UserLH) {
+function renderthisLH(ScriptName, Filename, Samples, UserLH) {
   
+const scriptName = ScriptName;
 const userLH = UserLH;    
 const filename = Filename;
 const samples = Samples;
 
 
-const childProcessRH = spawn('/Volumes/blenderFiles/blenderScript_LH', [filename, samples, userLH]);
+const childProcessRH = spawn(scriptName, [filename, samples, userLH]);
 
     childProcessRH.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`);
