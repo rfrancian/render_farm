@@ -7,13 +7,14 @@ const workerNodeRH = 'rsf@192.168.86.36'
 const workerNodeLH = 'rsf@192.168.86.20'
 
 // image strips
+// for the pi branch we use the NAS scripts
 const scriptnameLH = '/Volumes/blenderFiles/blenderScript_LH'
-// const scriptnameRH = '/Volumes/blenderFiles/blenderScript_RH'
+const scriptnameRH = '/Volumes/blenderFiles/blenderScript_RH'
 
 // using local script here because I'm testing this code on one of the machines that's
 // doing the rendering so I have to use sshpass to logon to itself.
 // the normal render_farm server will use the uncommented script above
-const scriptnameRH = './blenderScript_RH'
+// const scriptnameRH = './blenderScript_RH'
 
 
 // blender file name and requested samples
