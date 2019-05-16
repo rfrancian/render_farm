@@ -36,5 +36,3 @@ console.log(samples);
 renderNode1(scriptnameNode1, filename, samples, workerNode1, minX_Node1, maxX_Node1);
 renderNode2(scriptnameNode2, filename, samples, workerNode2, minX_Node2, maxX_Node2);
 
-
-module.exports = main_render;
