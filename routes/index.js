@@ -10,8 +10,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Render, the farm manager v.001' });
 });
 
-console.log(main.filename.form-control.filename)
-
 
 
 

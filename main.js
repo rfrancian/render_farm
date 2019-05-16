@@ -37,4 +37,4 @@ renderNode1(scriptnameNode1, filename, samples, workerNode1, minX_Node1, maxX_No
 renderNode2(scriptnameNode2, filename, samples, workerNode2, minX_Node2, maxX_Node2);
 
 
-// module.exports = main;
+module.exports = main;
