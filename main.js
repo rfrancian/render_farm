@@ -24,10 +24,10 @@ const scriptnameNode2 = '/Volumes/blenderFiles/blenderScript_Node2'
 const filename = '/Volumes/blenderFiles/statueDecimatedUV3packed.blend'
 
 const samples = 4;
-const minxNode2 = 0.3;
-const maxxNode2 = 1.0;
-const minxNode1 = 0.0;
-const maxxNode1 =0.3;
+const minX_Node2 = 0.3;
+const maxX_Node2 = 1.0;
+const minX_Node1 = 0.0;
+const maxX_Node1 =0.3;
 
 
 
@@ -39,6 +39,6 @@ console.log(filename);
 console.log(samples);
 
 // render left and right sides of image
-renderNode2(scriptnameNode2, filename, samples, workerNode2, minxNode2, maxxNode2);
-renderNode1(scriptnameNode1, filename, samples, workerNode1, minxNode1, maxxNode1);
+renderNode2(scriptnameNode2, filename, samples, workerNode2, minX_Node2, maxX_Node2);
+renderNode1(scriptnameNode1, filename, samples, workerNode1, minX_Node1, maxX_Node1);
 

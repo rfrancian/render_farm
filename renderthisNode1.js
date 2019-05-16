@@ -14,13 +14,13 @@
 
 const {spawn} = require('child_process');
 
-function renderthisNode1(ScriptName, Filename, Samples, WorkerNode1, minxNode1, maxxNode1) {
+function renderthisNode1(ScriptName, Filename, Samples, WorkerNode1, minX, maxX) {
   
 
 
 console.log('here: ',ScriptName, Filename, Samples, WorkerNode1);
 
-const childProcessRH = spawn(ScriptName, [Filename, Samples, WorkerNode1, minxNode1, maxxNode1]);
+const childProcessRH = spawn(ScriptName, [Filename, Samples, WorkerNode1, minX, maxX]);
 
     childProcessRH.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`);
