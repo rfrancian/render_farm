@@ -1,8 +1,6 @@
 
 async function main(filename, samples, split) {
 
-
-
     var renderNode2 = require('./renderthisNode2');
     var renderNode1 = require('./renderthisNode1');
     
@@ -19,9 +17,7 @@ async function main(filename, samples, split) {
     // blender file name and requested samples
     // const filename = '/Volumes/blenderFiles/statueDecimatedUV3packed.blend'
     
-    
     // const samples = 4;
-    
     // const split = 0.4;
     
     const minX_Node1 = 0.0;
@@ -45,4 +41,4 @@ async function main(filename, samples, split) {
 
 
 
-module.exports = main;
+module.exports = imageRender;

@@ -1,5 +1,5 @@
 var express = require('express');
-const main = require('../main')
+const imageRender = require('../imageRender')
 var router = express.Router();
 
 const filename = '/Volumes/blenderFiles/statueDecimatedUV3packed.blend'
@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Render, the farm manager v.001' });
 });
 
-main(filename, samples, split);
+imageRender(filename, samples, split);
 
 
 module.exports = router;
