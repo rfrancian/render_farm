@@ -23,13 +23,16 @@ const scriptnameNode2 = '/Volumes/blenderFiles/blenderScript_Node2'
 // const filename = '/Volumes/blenderFiles/flowers2.79.blend'
 const filename = '/Volumes/blenderFiles/statueDecimatedUV3packed.blend'
 
-const split = 0.3;
 
 const samples = 4;
-const minX_Node2 = split;
-const maxX_Node2 = 1.0;
+
+const split = 0.3;
+
 const minX_Node1 = 0.0;
 const maxX_Node1 = split;
+
+const minX_Node2 = split;
+const maxX_Node2 = 1.0;
 
 
 
