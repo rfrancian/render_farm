@@ -1,5 +1,5 @@
 
-async function main(filename, samples, split) {
+async function imageRender(filename, samples, split) {
 
     var renderNode2 = require('./renderthisNode2');
     var renderNode1 = require('./renderthisNode1');
