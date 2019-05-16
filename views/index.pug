@@ -19,25 +19,25 @@ block content
 
   form(method='POST' action='')
     div.form-group
-      label(for='filename') file name:
-      input#title.form-control(type='text', placeholder='/Volumes/blenderFiles/' name='filename' required='true'  size='75')
+      label(for='filename') file name :
+      input#filename.form-control(type='text', placeholder='/Volumes/blenderFiles/' name='filename' required='true'  size='75')
     p
     div.form-group
-      label(for='jobid') job ID:
+      label(for='jobid') job ID :
       input#jobid.form-control(type='text', placeholder='000' name='jobid' required='true') 
     p
     div.form-group
-      label(for='samples') samples:
+      label(for='samples') samples :
       input#samples.form-control(type='text', placeholder='samples' name='samples' required='true') 
     p
 
 
       div.form-group
-        label(for='RH') RH:
-        textarea#RH.form-control(type='textarea', placeholder='RH' name='RH' rows='10' required='true' cols='150') 
+        label(for='Node1') Node 1 :
+        textarea#Node1.form-control(type='textarea', placeholder='Node1' name='Node1' rows='10' required='true' cols='150') 
       div.form-group
-        label(for='LH') LH:
-        textarea#LH.form-control(type='textarea', placeholder='LH' name='LH' rows='10' required='true' cols= '150') 
+        label(for='Node2') Node 2 :
+        textarea#Node2.form-control(type='textarea', placeholder='Node2' name='Node2' rows='10' required='true' cols= '150') 
     p
       button.btn.btn-primary(type='submit') Submit
 
