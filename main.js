@@ -1,5 +1,5 @@
 
-async function main() {
+async function main(filename) {
 
 
 
@@ -17,7 +17,7 @@ async function main() {
     const scriptnameNode2 = '/Volumes/blenderFiles/blenderScript_Node2'
     
     // blender file name and requested samples
-    const filename = '/Volumes/blenderFiles/statueDecimatedUV3packed.blend'
+    // const filename = '/Volumes/blenderFiles/statueDecimatedUV3packed.blend'
     
     
     const samples = 4;
