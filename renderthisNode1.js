@@ -14,8 +14,6 @@
 const {spawn} = require('child_process');
 
 function renderthisNode1(ScriptName, Filename, Samples, WorkerNode1, minX, maxX) {
-  
-
 
 console.log('here: ',ScriptName, Filename, Samples, WorkerNode1);
 
