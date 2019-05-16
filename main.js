@@ -26,7 +26,7 @@ const filename = '/Volumes/blenderFiles/statueDecimatedUV3packed.blend'
 
 const samples = 4;
 
-const split = 0.3;
+const split = 0.4;
 
 const minX_Node1 = 0.0;
 const maxX_Node1 = split;
