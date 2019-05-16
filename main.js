@@ -1,34 +1,44 @@
-var renderRH = require('./renderthisRH');
-var renderLH = require('./renderthisLH');
+var renderNode2 = require('./renderthisNode2');
+var renderNode1 = require('./renderthisNode1');
 
 // these are test values atm
 // worker nodes
-const workerNodeRH = 'rsf@192.168.86.36'
-const workerNodeLH = 'rsf@192.168.86.20'
+const workerNode2 = 'rsf@192.168.86.36'
+const workerNode1 = 'rsf@192.168.86.20'
 
 // image strips
 // for the pi branch we use the NAS scripts
-const scriptnameLH = '/Volumes/blenderFiles/blenderScript_LH'
-const scriptnameRH = '/Volumes/blenderFiles/blenderScript_RH'
+const scriptnameNode1 = '/Volumes/blenderFiles/blenderScript_Node1'
+const scriptnameNode2 = '/Volumes/blenderFiles/blenderScript_Node2'
+// const scriptnameNode1 = '/home/rsf/render_farm/blenderScript2.8_Node1'
+// const scriptnameNode2 = '/home/rsf/render_farm/blenderScript2.8_Node2'
 
 // using local script here because I'm testing this code on one of the machines that's
 // doing the rendering so I have to use sshpass to logon to itself.
 // the normal render_farm server will use the uncommented script above
-// const scriptnameRH = './blenderScript_RH'
+// const scriptnameNode2 = './blenderScript_Node2'
 
 
 // blender file name and requested samples
-const filename = '/Volumes/blenderFiles/flowers2.79.blend'
+// const filename = '/Volumes/blenderFiles/flowers2.79.blend'
+const filename = '/Volumes/blenderFiles/statueDecimatedUV3packed.blend'
+
 const samples = 4;
+const minxNode2 = 0.3;
+const maxxNode2 = 1.0;
+const minxNode1 = 0.0;
+const maxxNode1 =0.3;
+
+
 
 // 
-console.log(workerNodeRH);
-console.log(workerNodeLH);
+console.log(workerNode2);
+console.log(workerNode1);
 
 console.log(filename);
 console.log(samples);
 
 // render left and right sides of image
-renderRH(scriptnameRH, filename, samples, workerNodeRH);
-renderLH(scriptnameLH, filename, samples, workerNodeLH);
+renderNode2(scriptnameNode2, filename, samples, workerNode2, minxNode2, maxxNode2);
+renderNode1(scriptnameNode1, filename, samples, workerNode1, minxNode1, maxxNode1);
 

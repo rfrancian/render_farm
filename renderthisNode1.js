@@ -1,7 +1,7 @@
 
 // this file starts a render child process spawn.
 // it takes the workerNode ID in the form <user>@<ip_address>, the blender filename, the number of samples desired, 
-// and the script name and starts (at the moment in my studio) my laptop doing the LH (lefthand side of the image)
+// and the script name and starts (at the moment in my studio) my laptop doing the Node1 (lefthand side of the image)
 // and my ubuntu machine doing the RH
 // both outputs are to stdout at the moment
 // next steps:
@@ -11,18 +11,16 @@
 
 
 
+
 const {spawn} = require('child_process');
 
-function renderthisRH(ScriptName, Filename, Samples, WorkerNodeRH) {
+function renderthisNode1(ScriptName, Filename, Samples, WorkerNode1, minxNode1, maxxNode1) {
+  
 
-const scriptName = ScriptName;
-const workerNodeRH = WorkerNodeRH;    
-const filename = Filename;
-const samples = Samples;
 
-console.log('here: ',scriptName, filename, samples, workerNodeRH);
+console.log('here: ',ScriptName, Filename, Samples, WorkerNode1);
 
-const childProcessRH = spawn(scriptName, [filename, samples, workerNodeRH]);
+const childProcessRH = spawn(ScriptName, [Filename, Samples, WorkerNode1, minxNode1, maxxNode1]);
 
     childProcessRH.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`);
@@ -43,8 +41,6 @@ const childProcessRH = spawn(scriptName, [filename, samples, workerNodeRH]);
 }
 
 
-module.exports= renderthisRH;
-
-
+module.exports= renderthisNode1;
 
 
