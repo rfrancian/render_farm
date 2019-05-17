@@ -20,7 +20,9 @@ router.post('/', function(req, res, next) {
   console.log(req.body.jobid)
   console.log(req.body.samples)
   console.log(req.body.split)
-
+  var textNode1 = document.getElementsByName(Node1)
+  textNode1.values += req.body.filename + '\n';
+  
   imageRender(req.body.filename, req.body.samples, req.body.split);
 });
 
