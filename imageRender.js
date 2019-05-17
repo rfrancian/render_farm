@@ -11,7 +11,7 @@ async function imageRender(filename, samples, split) {
     const workerNode2 = 'rsf@192.168.86.36'
     const workerNode1 = 'rsf@192.168.86.20'
     
-    // Image strips rendered by child process spawn with individual names
+    // individual scripts for each workerNode
     const scriptnameNode1 = '/Volumes/blenderFiles/blenderScript_Node1'
     const scriptnameNode2 = '/Volumes/blenderFiles/blenderScript_Node2'
     
@@ -21,7 +21,7 @@ async function imageRender(filename, samples, split) {
     const minX_Node2 = split;
     const maxX_Node2 = 1.0;
     
-    // 
+    // test logs
     console.log(workerNode2);
     console.log(workerNode1);
     console.log(filename);

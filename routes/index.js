@@ -14,8 +14,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Render, the farm manager v.001' });
 });
 
-// render image
-imageRender(filename, samples, split);
+router.post('/', function(req, res, next) {
+  // render image
+  imageRender(filename, samples, split);
+});
+
 
 
 module.exports = router;
