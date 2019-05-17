@@ -21,7 +21,6 @@ const childProcessNode1 = spawn(ScriptName, [Filename, Samples, WorkerNode1, min
 
     childProcessNode1.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`);
-        // res.write(data)
     });
 
 
