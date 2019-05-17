@@ -4,9 +4,9 @@ const imageRender = require('../imageRender')
 var router = express.Router();
 
 // temp set render inputs that will eventually come from a web form
-const filename = '/Volumes/blenderFiles/statueDecimatedUV3packed.blend'
-const samples = 4;
-const split = 0.4;
+const filename = '/Volumes/blenderFiles/'
+const samples = 2;
+const split = 0.5;
 
 
 /* GET home page. */
@@ -21,7 +21,7 @@ router.post('/', function(req, res, next) {
   console.log(req.body.samples)
   console.log(req.body.split)
 
-  // imageRender(filename, samples, split);
+  imageRender(req.body.filename, req.body.samples, req.body.split);
 });
 
 
