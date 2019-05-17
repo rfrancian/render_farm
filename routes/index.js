@@ -16,10 +16,10 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   // render image
-  console.log(body.filename)
-  console.log(body.jobid)
-  console.log(body.samples)
-  console.log(body.split)
+  console.log(req.body.filename)
+  console.log(req.body.jobid)
+  console.log(req.body.samples)
+  console.log(req.body.split)
 
   // imageRender(filename, samples, split);
 });
